@@ -23,7 +23,6 @@ public class UsuarioService {
         return _usuarioClient.salvarUsuario(usuarioDTO);
     }
 
-
     public String loginUsuario(LoginDTORequest loginDTORequest){
         return  _usuarioClient.login(loginDTORequest);
     }
@@ -31,7 +30,6 @@ public class UsuarioService {
     public UsuarioDTOResponse buscarUsuarioByEmail(String email, String token ) {
             return _usuarioClient.buscarUsuarioByEmail(email, token);
     }
-
 
 
     public void DeletarUsuarioByEmail(String email, String token) {

@@ -24,7 +24,6 @@ public interface UsuarioClient {
     UsuarioDTOResponse buscarUsuarioByEmail(@RequestParam("email") String email,
                                             @RequestHeader(name = "Authorization") String token);
 
-
     @DeleteMapping("/{email}")
     Void deletarUsuarioByEmail(@PathVariable String email,
                                @RequestHeader(name = "Authorization") String token);
@@ -38,7 +37,6 @@ public interface UsuarioClient {
                                           @RequestParam("id") Long id,
                                           @RequestHeader(name = "Authorization") String token);
 
-
     @PutMapping("/telefone")
     TelefoneDTOResponse atualizarTelefone(@RequestBody TelefoneDTORequest telefoneDTO,
                                           @RequestParam("id") Long id,
@@ -51,5 +49,4 @@ public interface UsuarioClient {
     @PostMapping("/telefoneCadastro")
     TelefoneDTOResponse cadastrarTelefone(@RequestBody TelefoneDTORequest telefoneDTO,
                                           @RequestHeader(name = "Authorization") String token);
-
 }
